@@ -1,0 +1,14 @@
+import { motion as Motion } from 'framer-motion';
+
+const PageWrapper = ({ children }) => (
+  <Motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+  >
+    {children}
+  </Motion.div>
+);
+
+export default PageWrapper;
